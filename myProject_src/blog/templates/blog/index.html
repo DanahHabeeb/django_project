@@ -74,93 +74,53 @@
 </div>
 
 <!-- about row -->
-<div class=" sectin justify-content-center align-items-center" style=" margin-top: 50px; background-color: #E1E7ED; height: 500px;">
+<div class=" sectin justify-content-center align-items-center" style=" margin-top: 50px; background-color: #E1E7ED; height: 500px;" data-aos="fade-up">
   <div class="row">
-    <!-- Left column -->
-    <div class="col-md-6 d-flex justify-content-center align-items-center" style="margin-top: 5%;">
+    <!-- right column -->
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
       <!-- Content for left column -->
       <div style="margin-right: 40px;"> 
         <h1 style="color:#3B5286;"> عـن إمتَـثل </h1>
-      <p> تعتبر <a style="color:#3B5286; font-weight: 200%;"> إمتَـثل </a>  أداة متخصصة في تقديم حلول أتمتة عملية التدقيق. 
-        <br> تهدف إلى تسهيل وتحسين عمليات التدقيق من خلال توظيف التكنولوجيا والحلول الذكية. 
-        <br>فريقنا يطمح إلى توظيف تقنيات الذكاء الاصطناعي وتعلم الآلة لتوفير نتائج دقيقة وفعالة.
-        <br> نسعى جاهدين لتحقيق رؤية واضحة، وهي تحقيق تدقيق شامل وموثوق به بشكل أسرع وأكثر كفاءة.
+      <p style="text-align: justify;"> تعتبر <a style="color:#3B5286; font-weight: 200%;"> إمتَـثل </a>  أداة متخصصة في تقديم حلول أتمتة عملية التدقيق. 
+         تهدف إلى تسهيل وتحسين عمليات التدقيق من خلال توظيف التكنولوجيا والحلول الذكية. 
+         فريقنا يطمح إلى توظيف تقنيات الذكاء الاصطناعي وتعلم الآلة لتوفير نتائج دقيقة وفعالة.
+         نسعى جاهدين لتحقيق رؤية واضحة، وهي تحقيق تدقيق شامل وموثوق به بشكل أسرع وأكثر كفاءة.
          نحن نؤمن بأن أتمتة عملية التدقيق يمكن أن تسهم في توفير الوقت والجهد، وتقليل الأخطاء البشرية، وتعزيز الامتثال. </p>
       </div>
     </div>
-        <!-- Right column -->
+        <!-- Left column -->
         <div class="col-md-6">
-          <div class="row">
-
-            <!-- Top row in the right column -->
-            <div class="col-md-6 d-flex justify-content-right align-items-right " style="margin-top:10%;">
-              <!-- Content for top-left nested column -->
-              <div> 
-                <blockquote class="block block-custom bg-white p-5 shadow rounded">
-                  
-                <!-- Column Image -->
-                <div>
-                  <img src="{% static 'blog/images/Auditor.png' %}" alt="user" style="width: 100px; height:75px;">
-                </div>
-
-                <!-- Column Content -->
-                <div>
-                  <p>يتم تعبئة تقرير الالتزام من قبل مدقق الجهة </p>
-                </div> 
-
-              </blockquote><!-- END -->
-              </div>
+          <div class="row d-flex justify-content-right align-items-right" style="margin-top:15%;">
+            <div class="content-wrapper" style="display: flex; align-items: center; margin-right: auto;">
+              <img src="{% static 'blog/images/Auditor.png' %}" alt="user" style="width: 70px; height:50px; margin-right: 10px;">
+              <!-- Column Content -->
+              <h4 style="color:#3B5286;"> تعبئة تقرير الالتزام من قبل مدقق الجهة</h4>
             </div>
-
-            <div class="col-md-6 d-flex justify-content-right align-items-right" style="margin-top:10%;">
-              <!-- Content for top-right nested column -->
-              <div> 
-
-                <!-- Column Image -->
-                <div>
-                  <img src="{% static 'blog/images/Upload.png' %}" alt="user" style="width: 110px; height:75px;">
-                </div>
-
-                <!-- Column Content -->
-                <div>
-                  <p>يتم رفع تقرير الالتزام المعبئ في أداة إمتثل</p>
-                </div>  
-
-              </div>
-            </div>
-
-
           </div>
 
-          <div class="row d-flex justify-content-center align-items-center">
-            <!-- Bottom row in the right column -->
-            <div class="col-md-7 d-flex justify-content-right align-items-right" style="margin-top:8%;">
-              <!-- Content for bottom-left nested column -->
-              <div> 
-
-                <!-- Column Image -->                
-                <div>
-                  <img src="{% static 'blog/images/Website.png' %}" alt="user" style="width: 120px; height:75px;">
-                </div>
-                
-                <!-- Column Content -->
-                <div>
-                  <p>تقوم الأداة بتوليد ملف يحتوي على:<br>
-                    •	 إجراءات تصحيحية مقترحة باستخدام الذكاء الاصطناعي التوليدي <br>
-                    •	نسبة الامتثال <br>
-                    •	رسوم بيانية توضح التزام الجهة  </p>
-                </div> 
-
-              </div>
-
+          <div class="row d-flex justify-content-right align-items-right" style="margin-top:5%;">
+            <div class="content-wrapper" style="display: flex; align-items: center; margin-right: auto;">
+              <img src="{% static 'blog/images/Upload.png' %}" alt="user" style="width: 70px; height:50px; margin-right: 10px;">
+              <!-- Column Content -->
+              <h4 style="color:#3B5286;"> رفع تقرير الالتزام المعبئ في أداة إمتثل</h4>
             </div>
-
           </div>
+
+          <div class="row d-flex justify-content-right align-items-right" style="margin-top:5%;">
+            <div class="content-wrapper" style="display: flex; align-items: center; margin-right: auto;">
+              <img src="{% static 'blog/images/Website.png' %}"  alt="user" style="width: 70px; height:50px; margin-right: 10px;">
+              <!-- Column Content -->
+              <div>
+              <p><h4 style="color:#3B5286;">تقوم الأداة بتوليد ملف يحتوي على:</h4>
+                •	 إجراءات تصحيحية مقترحة باستخدام الذكاء الاصطناعي التوليدي <br>
+                •	نسبة الامتثال <br>
+                •	رسوم بيانية توضح التزام الجهة  </p>
+            </div>
         </div>
-
+      </div>
   </div>
 </div>
-
+</div>
 <!-- end intro -->
 <div class="sectin justify-content-center align-items-center"  style="background-color: #EDEBEB;">
 
@@ -240,8 +200,10 @@
 <!-- start of risk service -->
     <div class="row" data-aos="fade-up" style="margin-top: 50px; margin-bottom: 50px;" >
       <div class="col text-center ">
-        <h1 class="display-5 font-weight-bold">خدمات قياس مستوى الخطر</h1>
-        <p class="lead"> ماهي خدمات قياس الخطر </p>
+        <div class="card text-dark" style="min-height: 40px; background-color: #02395D">
+        <h1 class="display-5 font-weight-bold" style="margin-top: 20px; color: #ffffff;">خدمات قياس مستوى الخطر</h1>
+        <p class="lead" style=" color: #ffffff;"> ماهي خدمات قياس الخطر </p>
+        </div>
       </div>
     </div>
 
@@ -271,6 +233,29 @@
 </div>
 </div>
 
+</div>
+
+
+<div style=" margin-top: 50px; margin-bottom: 50px; background-color: #E1E7ED; height: 300px;" data-aos="fade-up">
+  <div class="row mt-3" >
+
+    <div class="col-md-7" style="margin-right: 5%;">
+      
+      <h1 style="color:#3B5286; margin-top: 10%;"> مبـدأ إمتَـثل </h1>
+      <p style="font-size: 0.9rem; text-align: justify;"> نحن ملتزمون بمبدأ الشفافية والشراكة المستدامة مع عملائنا عن طريق توفير معلومات واضحة حول كيفية استخدام التكنولوجيا الذكية في الأداة،
+         ونقدم التوجيه لضمان استخدامها بطريقة صحيحة وفعالة.
+        بالنسبة للنموذج المدرب المستخدم في الأداة
+        ، نحن نستخدم نموذج يعتمد على الذكاء الاصطناعي التوليدي المعروف باسم AraGPT2.
+         يعتبر AraGPT2 من بين أحدث وأقوى النماذج العربية المتاحة حاليًا، ويتمتع بقدرات متقدمة في فهم وتوليد النصوص.
+          نعمل باستمرار على تحسين دقة وأداء النماذج المستخدمة في الأداة وتطويرها وفقًا لأحدث التقنيات والابتكارات المتاحة.</p>
+
+    </div>
+
+    <div class="col-md-4">
+
+    </div>
+
+  </div>
 </div>
 
 <style>
