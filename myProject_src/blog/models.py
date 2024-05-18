@@ -1,7 +1,9 @@
+import os
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
+
 #tables translelated into the db
 # fields are title , content ...
 # db is written using pythonand needed to be transformed to sql using commands 
@@ -10,7 +12,7 @@ from django.urls import reverse
 
 def user_directory_path(instance, filename):
     # File will be uploaded to MEDIA_ROOT/user_<id>/<filename>
-    return f"user_{instance.author.id}/{filename}"
+    return os.path.join('user', f'{instance.author.id}', filename)
     
 class Post( models.Model):
     title = models.CharField(max_length=100)
@@ -25,7 +27,7 @@ class Post( models.Model):
     
     def get_absolute_url (self):
          return reverse('detail', args=[self.pk])
-    
+
     
     class Meta: #for the post to appear from new to old 
         ordering = ('-post_date',)

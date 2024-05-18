@@ -208,11 +208,11 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">عن إمتثل</a>
+                <a class="nav-link" onclick="scrollToAboutSection(); return false;">عن إمتثل</a>
               </li>
-
+              
               <li class="nav-item">
-                <a class="nav-link" href="#">خدماتنا</a>
+                <a class="nav-link" onclick="scrollToservicesSection(); return false;">خدماتنا</a>
               </li>
 
             </ul>
@@ -265,5 +265,22 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="{% static 'blog/js/Animation.js' %}"></script>
         
-</body>    
+</body>   
+
+<!-- JavaScript to scroll to the section -->
+<script>
+  function scrollToAboutSection() {
+    var section = document.getElementById('About_Section');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+
+<script>
+  function scrollToservicesSection() {
+    var section = document.getElementById('services_Section');
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+
+
 </html>

@@ -1,6 +1,7 @@
 from django import forms
 from .models import Comment, Post
-
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Submit, Div
 class NewComment(forms.ModelForm) :
     class Meta:
         model = Comment
@@ -10,7 +11,10 @@ class NewComment(forms.ModelForm) :
 class PostCreateForm(forms.ModelForm) :
     title = forms.CharField(label='عنوان التقرير', max_length=50)
     content = forms.CharField(label=' وصف التقرير ', widget=forms.Textarea )
+    uploaded_report = forms.FileField(label='ارفق تقرير الالتزام', required=True)
+    
     class Meta:
         model = Post
-        fields = ['title','content']
-        
+        fields = ['title','content','uploaded_report']
+
+

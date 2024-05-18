@@ -6,19 +6,25 @@
     <div class="container justify-content-center">
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-6 col-lg-4 mb-4 justify-content-center">
+          {% if messages %}
+          <div class="alert alert-warning" role="alert">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+          </div>
+          {% endif %}
           <div class="card text-dark card-has-bg click-col justify-content-center" >
             <img class="card-img d-none" src="#" alt="#">
               <div class="card-img-overlay d-flex flex-column justify-content-center">
                <div class="card-body">
                 <legend class="border-bottom pb-1 mb-3">إنشـاء تقريـر إلتزام جديـد</legend>
-                    <form method="POST" enctype="multipart/form-data" id="uploadForm" onsubmit="return validateForm()" >
+
+                    <form method="POST" enctype="multipart/form-data" id="uploadForm" >
                         {% csrf_token %}
                         {{form|crispy}}      
                 </div>
-                <label for="id_uploaded_report" class="btn btn-outline-secondary mt-2 btn-rounded" style="margin-bottom: 10px;" > إرفاق تقرير الإلتزام  </label>
-                <input type="file" name="uploaded_report" id="id_uploaded_report" style="display: none" required >
-            
-
+                <input type="file" name="uploaded_report" id="id_uploaded_report" style="display: none" >
+                
                         <div class="card-footer">
                         <div class="media text-center">
                             <!-- a button to confirm the changes -->

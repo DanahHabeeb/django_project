@@ -5,6 +5,8 @@ from .forms import NewComment, PostCreateForm
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django .contrib import messages
+from django.http import JsonResponse
 #creating views
 
 def Try(request) :
@@ -58,14 +60,34 @@ def post_detail (request, post_id):
 
     return render(request, 'blog/detail.html', context)
 
-class PostCreateView(LoginRequiredMixin,CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post 
     template_name = 'blog/new_post.html'
     form_class = PostCreateForm
+
     def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-    
+        uploaded_report = self.request.FILES.get('uploaded_report', None)
+        if uploaded_report:
+            # Check if the file is an Excel file
+            if uploaded_report.name.endswith('.xlsx') or uploaded_report.name.endswith('.xls'):
+                if uploaded_report.size > 0:
+                    form.instance.author = self.request.user
+                    return super().form_valid(form)
+                else:
+                    # File is empty, display warning message
+                    messages.warning(self.request, 'الملف المرفق فارغ!')
+                    return super().form_invalid(form)
+            else:
+                # File is not an Excel file, display warning message
+                messages.warning(self.request, 'يرجى إرفاق ملف Excel فقط!')
+                return super().form_invalid(form)
+        else:
+            # File not uploaded, display warning message
+            messages.warning(self.request, 'يرجى إرفاق تقرير الالتزام قبل التأكيد!')
+            return super().form_invalid(form)
+
+        
+
 class PostUpdateView(UserPassesTestMixin,LoginRequiredMixin,UpdateView):
     model = Post 
     template_name = 'blog/post_update.html'
