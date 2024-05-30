@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
 <!--  i havnt add any logos yet -->
-    <link rel="shortcut icon" href=" {% static 'blog/images/favicon.png' %} ">     
+    <link rel="shortcut icon" href=" {% static 'blog/images/favicon.png' %}">     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
       
@@ -40,9 +40,6 @@
         margin-bottom: 20px;
       }
 
-      /*
-      header top
-      */
       .topbar {
         background-color: #3B5286;
         padding: 0;
@@ -173,18 +170,15 @@
 
 
 <body>
-    <!--  start of the navbar bg-body-tertiary -->
+    <!--  start of the navbar  -->
   <header> 
     <div class=" topbar ">
       <div class="row">
         <!-- social icon-->
         <div class="col-sm-12">
           <ul class="social-network">
-            <li><a class="waves-effect waves-dark" href="#"><i class="fab fa-facebook"></i></a></li>
             <li><a class="waves-effect waves-dark" href="#"><i class="fab fa-twitter"></i></a></li>
             <li><a class="waves-effect waves-dark" href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a class="waves-effect waves-dark" href="#"><i class="fab fa-pinterest"></i></a></li>
-            <li><a class="waves-effect waves-dark" href="#"><i class="fab fa-google-plus"></i></a></li>
           </ul>
         </div>
       </div>
@@ -193,7 +187,7 @@
     <nav class="navbar navbar-expand-lg navbar navbar-expand-lg navbar-dark mx-background-top-linear">
         <div class="container-fluid">
           <a class="navbar-brand"  style="color: #ffffff;" >
-            <!--  logo placement before the title -->
+
             <img src="{% static 'blog\images\ImtathilLogo.png'%}" alt="شعار الجامعة" width="70px" ></a> 
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -224,8 +218,8 @@
             </ul>
             {% else %}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"> <a class="nav-link" href="{%url 'login'%}" style="color: #ffffff;">تسجيل الدخول </a> </li>
-              <li class="nav-item"> <a class="nav-link" href="{% url 'register'%}" style="color: #ffffff;">تسجيل  </a> </li> 
+              <li class="nav-item"> <a class="nav-link" href="{%url 'login'%}" style="color: #3B5286;">تسجيل الدخول </a> </li>
+              <li class="nav-item"> <a class="nav-link" href="{% url 'register'%}" style="color: #3B5286;">تسجيل  </a> </li> 
             </ul>
             {% endif %}
 

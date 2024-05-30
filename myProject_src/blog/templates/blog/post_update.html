@@ -12,8 +12,11 @@
            <div class="card-body">
               <h4 class="card-title mt-0 "><a class="text-dark">تحرير التقرير</a></h4>
               <form method="POST">
+
                 {% csrf_token %}
                 {{form|crispy}}
+                
+
             </div>
             <div class="card-footer">
                 <div class="media text-center">

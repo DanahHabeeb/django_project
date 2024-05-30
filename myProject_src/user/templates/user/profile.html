@@ -21,14 +21,15 @@
                 <div class="card-body little-profile text-center"> <!-- Remove fixed height for the card body -->
                     <div class="pro-img"><img src="{{user.profile.image.url}}" alt="user"></div>
                     <h3 class="m-b-0">{{user.first_name}} {{user.last_name}}</h3>
-                    <p>{{user.email}}</p>
+                    <p class="lead"> {{user.username}}@</p>
+                    <p> {{user.email}}</p>
                     <a class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded" data-abc="true" href="{% url 'profile_update' %}"> <i class="fas fa-pen fa-xs"> </i>تعديل</a>
                     <div class="row text-center m-t-20"></div>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div class="card mb-3 mx-auto" style="height: 507px;"> <!-- Center the card -->
+            <div class="card mb-3 mx-auto" style="height: 546px;"> <!-- Center the card -->
                 <div class="card-body text-center"> <!-- Remove fixed height for the card body -->
                     <h5 class="border-bottom pb-3 mb-4">العدد الكُلي للتقارير</h5>
                     <h6 class="text-center p-2 text-light" style="background: #01385F;">{{posts.count}}</h6>
@@ -56,6 +57,11 @@
         margin-bottom: 30px;
         -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .lead {
+    color: #aaa;
+    font-size: 0.9rem;
     }
 
     .card-img-top {

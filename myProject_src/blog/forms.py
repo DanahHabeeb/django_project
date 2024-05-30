@@ -11,10 +11,18 @@ class NewComment(forms.ModelForm) :
 class PostCreateForm(forms.ModelForm) :
     title = forms.CharField(label='عنوان التقرير', max_length=50)
     content = forms.CharField(label=' وصف التقرير ', widget=forms.Textarea )
-    uploaded_report = forms.FileField(label='ارفق تقرير الالتزام', required=True)
+    uploaded_report = forms.FileField(label='ارفاق الملف', required=True)
+   
     
     class Meta:
         model = Post
         fields = ['title','content','uploaded_report']
 
 
+class PostUpdateForm(forms.ModelForm):
+    title = forms.CharField(label='عنوان التقرير', max_length=50)
+    content = forms.CharField(label=' وصف التقرير ', widget=forms.Textarea)
+    
+    class Meta:
+        model = Post
+        fields = ['title', 'content']

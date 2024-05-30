@@ -21,6 +21,7 @@ class Post( models.Model):
     post_update = models.DateTimeField(auto_now=True) #updated every time the post is alterd
     author = models.ForeignKey(User, on_delete= models.CASCADE) #user is from django tables
     uploaded_report = models.FileField(upload_to=user_directory_path, blank=True, null=True)
+    generated_pdf = models.FileField(upload_to='generated_pdfs/', blank=True, null=True)
 
     def __str__(self): #to return the title at the site administration
         return self.title
@@ -43,3 +44,8 @@ class Comment (models.Model): #inherits from models class
         return 'علق {} على {}.'.format(self.name, self.post)
     class Meta:
         ordering = ('-comment_date',)
+
+
+
+
+    
